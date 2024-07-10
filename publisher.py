@@ -2,7 +2,6 @@
 
 import argparse
 import datetime
-import os
 import time
 import uuid
 import multiprocessing
@@ -15,15 +14,14 @@ def on_connect(client, userdata, flags, return_code):
         print("Connection successful")
     else:
         print(f"Failed to connect, return code {return_code}\n")
-    client.subscribe("HELLO")
 
 
 def parse_args():
     """Parse command-line arguments"""
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("-c", "--cluster", help="Cluster", required=True)
-    parser.add_argument("-n", "--node", help="Node Name", required=True)
-    parser.add_argument("-t", "--topic", help="Topic Name", required=True)
+    # parser.add_argument("-c", "--cluster", help="Cluster", required=True)
+    # parser.add_argument("-n", "--node", help="Node Name", required=True)
+    # parser.add_argument("-t", "--topic", help="Topic Name", required=True)
     parser.add_argument(
         "-p", "--publishers", help="Number of Publishers", type=int, default=1
     )
@@ -31,45 +29,57 @@ def parse_args():
     return args
 
 
-def publisher(cluster, node, topic, publisher_id):
+def publisher(node, topic, publisher_id):
     """Publisher function to run in each process"""
-    message_prefix = f"This message was published to {cluster} cluster"
+    message_prefix = f"This message was published to {node}"
     client_id = str(uuid.uuid4())
     client = mqtt.Client(client_id=client_id)
-    username = os.getenv(f"{cluster.upper()}_USERNAME")
-    password = os.getenv(f"{cluster.upper()}_PASSWORD")
-    vhost = os.getenv(f"{cluster.upper()}_VHOST")
+
+    # username = os.getenv(f"{cluster.upper()}_USERNAME")
+    # password = os.getenv(f"{cluster.upper()}_PASSWORD")
+    # vhost = os.getenv(f"{cluster.upper()}_VHOST")
+    username = "guest"
+    password = "guest"
+    vhost = "/"
+
     print(f"username: {username}, password: {password}, vhost: {vhost}")
     client.username_pw_set(username=f"{vhost}:{username}", password=password)
-    print(
-        f"Connecting to [{cluster}] cluster on node [{node}] with clientID [{client_id}]"
-    )
+
+    print(f"Connecting to node [{node}] with clientID [{client_id}]")
     client.on_connect = on_connect
     client.connect(node, 1883, 60)
-    index = 0
     large_message = "X" * 1000000  # Example large message (1 million characters)
+    index = 0
 
-    while True:
-        message = f"{message_prefix} | {client_id} | {time.time()} | {vhost} | {index} | {large_message}"
-        print(
-            f'Publisher {publisher_id} with client_id "{client_id}" publishing message at {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S:%f")}'
-        )
-        client.publish(topic, message, 0, False)
-        client.loop()
-        time.sleep(0.1)
-        index += 1
+    try:
+        while True:
+            client.loop(0.5)
+            message = f"{message_prefix} | {client_id} | {time.time()} | {vhost} | {index} | {large_message}"
+            print(
+                f'Publisher {publisher_id} with client_id "{client_id}" publishing message at {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S:%f")}'
+            )
+            client.publish(topic, message, 0, False)
+            client.loop(0.5)
+            index += 1
+    except KeyboardInterrupt:
+        print("[INFO] PUBLISHER EXITING!")
 
 
 def main():
     """Main method"""
     args = parse_args()
     publishers = args.publishers
+    topic = "rabbitmq-users-4AOwZrQyekI"
+    node = "localhost"
 
-    with multiprocessing.Pool(publishers) as pool:
-        pool.starmap(
-            publisher,
-            [(args.cluster, args.node, args.topic, i) for i in range(publishers)],
-        )
+    with multiprocessing.Pool(processes=publishers) as pool:
+        try:
+            pool.starmap(
+                publisher,
+                [(node, topic, i) for i in range(publishers)],
+            )
+        except KeyboardInterrupt:
+            print("[INFO] EXITING!")
 
 
 if __name__ == "__main__":

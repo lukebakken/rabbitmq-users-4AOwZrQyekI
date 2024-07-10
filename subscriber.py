@@ -53,29 +53,40 @@ def on_message(client, userdata, message):
         )
 
 
-def parse_args():
-    """Parse command-line arguments"""
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("-c", "--cluster", help="Cluster", required=True)
-    parser.add_argument("-n", "--node", help="Node Name", required=True)
-    parser.add_argument("-t", "--topic", help="Topic Name", required=True)
-    args = parser.parse_args()
-    return args
+# def parse_args():
+#     """Parse command-line arguments"""
+#     parser = argparse.ArgumentParser(description=__doc__)
+#     parser.add_argument("-c", "--cluster", help="Cluster", required=True)
+#     parser.add_argument("-n", "--node", help="Node Name", required=True)
+#     parser.add_argument("-t", "--topic", help="Topic Name", required=True)
+#     args = parser.parse_args()
+#     return args
 
 
 def main():
     """Main method"""
-    args = parse_args()
-    client = mqtt.Client(userdata={"topic": args.topic})  # Pass topic as userdata
-    username = os.getenv(f"{args.cluster.upper()}_USERNAME")
-    password = os.getenv(f"{args.cluster.upper()}_PASSWORD")
-    vhost = os.getenv(f"{args.cluster.upper()}_VHOST")
+    # args = parse_args()
+    # client = mqtt.Client(userdata={"topic": args.topic})  # Pass topic as userdata
+    client = mqtt.Client(userdata={"topic": "rabbitmq-users-4AOwZrQyekI"})  # Pass topic as userdata
+
+    # username = os.getenv(f"{args.cluster.upper()}_USERNAME")
+    # password = os.getenv(f"{args.cluster.upper()}_PASSWORD")
+    # vhost = os.getenv(f"{args.cluster.upper()}_VHOST")
+    username = "guest"
+    password = "guest"
+    vhost = "/"
+    node = "localhost"
+
     print(f"username: {username}, password: {password}, vhost: {vhost}")
     client.username_pw_set(username=f"{vhost}:{username}", password=password)
-    print(f"Connecting to [{args.cluster}] cluster on node [{args.node}]")
+
+    print(f"Connecting to node [{node}]")
+
     client.on_connect = on_connect
     client.on_message = on_message
-    client.connect(f"{args.node}", 1883, 60)
+
+    client.connect(node, 1883, 60)
+
     client.loop_forever()
 
 
