@@ -19,38 +19,41 @@ def on_connect(client, userdata, flags, return_code):
 
 
 def on_message(client, userdata, message):
-    """The callback for when a PUBLISH message is received from the server"""
-    payload = message.payload.decode()
-    parts = payload.split(" | ")
+    try:
+        """The callback for when a PUBLISH message is received from the server"""
+        payload = message.payload.decode()
+        parts = payload.split(" | ")
 
-    # Extract relevant parts from the message
-    cluster = parts[0]
-    client_id = parts[1]
-    timestamp = parts[2]
-    vhost = parts[3]
-    index = int(parts[4])
-    large_message = parts[5] if len(parts) > 5 else ""
+        # Extract relevant parts from the message
+        cluster = parts[0]
+        client_id = parts[1]
+        timestamp = parts[2]
+        vhost = parts[3]
+        index = int(parts[4])
+        large_message = parts[5] if len(parts) > 5 else ""
 
-    # Use client_id as the unique identifier for the publisher
-    publisher_id = client_id
+        # Use client_id as the unique identifier for the publisher
+        publisher_id = client_id
 
-    # Check if this is the first message from the publisher
-    if publisher_id not in last_received_index:
-        last_received_index[publisher_id] = index - 1
+        # Check if this is the first message from the publisher
+        if publisher_id not in last_received_index:
+            last_received_index[publisher_id] = index - 1
 
-    # Verify the order of the messages
-    if index == last_received_index[publisher_id] + 1:
-        print(
-            f"Message received in order from client '{publisher_id}' with index '{index}' and payload '{payload[:44]}...'"
-        )  # Print only first 45 characters of payload
-        last_received_index[publisher_id] = index
-    else:
-        print(
-            f"Message OUT OF ORDER from client '{publisher_id}' with index '{index}' and payload '{payload[:45]}...' Expected index {last_received_index[publisher_id] + 1}"
-        )
-        last_received_index[publisher_id] = (
-            index  # Update the index to the current index
-        )
+        # Verify the order of the messages
+        if index == last_received_index[publisher_id] + 1:
+            print(
+                f"Message received in order from client '{publisher_id}' with index '{index}' and payload '{payload[:44]}...'"
+            )  # Print only first 45 characters of payload
+            last_received_index[publisher_id] = index
+        else:
+            print(
+                f"Message OUT OF ORDER from client '{publisher_id}' with index '{index}' and payload '{payload[:45]}...' Expected index {last_received_index[publisher_id] + 1}"
+            )
+            last_received_index[publisher_id] = (
+                index  # Update the index to the current index
+            )
+    except KeyboardInterrupt:
+        print("[INFO] SUBSCRIBER EXITING")
 
 
 # def parse_args():
@@ -91,4 +94,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("[INFO] SUBSCRIBER EXITING")
