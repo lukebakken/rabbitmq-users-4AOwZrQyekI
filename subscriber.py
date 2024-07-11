@@ -4,9 +4,6 @@ import argparse
 import os
 import paho.mqtt.client as mqtt
 
-# Dictionary to store the last received index for each publisher
-last_received_index = {}
-
 
 def on_connect(client, userdata, flags, return_code):
     """The callback for when the client receives a CONNACK response from the server"""
@@ -32,49 +29,19 @@ def on_message(client, userdata, message):
         index = int(parts[4])
         large_message = parts[5] if len(parts) > 5 else ""
 
-        # Use client_id as the unique identifier for the publisher
-        publisher_id = client_id
-
-        # Check if this is the first message from the publisher
-        if publisher_id not in last_received_index:
-            last_received_index[publisher_id] = index - 1
-
-        # Verify the order of the messages
-        if index == last_received_index[publisher_id] + 1:
+        if index % 10 == 0:
             print(
-                f"Message received in order from client '{publisher_id}' with index '{index}' and payload '{payload[:44]}...'"
+                f"Message received from client '{client_id}' with index '{index}' and payload '{payload[:44]}...'"
             )  # Print only first 45 characters of payload
-            last_received_index[publisher_id] = index
-        else:
-            print(
-                f"Message OUT OF ORDER from client '{publisher_id}' with index '{index}' and payload '{payload[:45]}...' Expected index {last_received_index[publisher_id] + 1}"
-            )
-            last_received_index[publisher_id] = (
-                index  # Update the index to the current index
-            )
     except KeyboardInterrupt:
         print("[INFO] SUBSCRIBER EXITING")
 
 
-# def parse_args():
-#     """Parse command-line arguments"""
-#     parser = argparse.ArgumentParser(description=__doc__)
-#     parser.add_argument("-c", "--cluster", help="Cluster", required=True)
-#     parser.add_argument("-n", "--node", help="Node Name", required=True)
-#     parser.add_argument("-t", "--topic", help="Topic Name", required=True)
-#     args = parser.parse_args()
-#     return args
-
-
 def main():
     """Main method"""
-    # args = parse_args()
-    # client = mqtt.Client(userdata={"topic": args.topic})  # Pass topic as userdata
-    client = mqtt.Client(userdata={"topic": "rabbitmq-users-4AOwZrQyekI"})  # Pass topic as userdata
-
-    # username = os.getenv(f"{args.cluster.upper()}_USERNAME")
-    # password = os.getenv(f"{args.cluster.upper()}_PASSWORD")
-    # vhost = os.getenv(f"{args.cluster.upper()}_VHOST")
+    client = mqtt.Client(
+        userdata={"topic": "rabbitmq-users-4AOwZrQyekI"}
+    )  # Pass topic as userdata
     username = "guest"
     password = "guest"
     vhost = "/"

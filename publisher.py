@@ -19,9 +19,6 @@ def on_connect(client, userdata, flags, return_code):
 def parse_args():
     """Parse command-line arguments"""
     parser = argparse.ArgumentParser(description=__doc__)
-    # parser.add_argument("-c", "--cluster", help="Cluster", required=True)
-    # parser.add_argument("-n", "--node", help="Node Name", required=True)
-    # parser.add_argument("-t", "--topic", help="Topic Name", required=True)
     parser.add_argument(
         "-p", "--publishers", help="Number of Publishers", type=int, default=1
     )
@@ -35,9 +32,6 @@ def publisher(node, topic, publisher_id):
     client_id = str(uuid.uuid4())
     client = mqtt.Client(client_id=client_id)
 
-    # username = os.getenv(f"{cluster.upper()}_USERNAME")
-    # password = os.getenv(f"{cluster.upper()}_PASSWORD")
-    # vhost = os.getenv(f"{cluster.upper()}_VHOST")
     username = "guest"
     password = "guest"
     vhost = "/"
@@ -55,9 +49,10 @@ def publisher(node, topic, publisher_id):
         while True:
             client.loop(0.5)
             message = f"{message_prefix} | {client_id} | {time.time()} | {vhost} | {index} | {large_message}"
-            print(
-                f'Publisher {publisher_id} with client_id "{client_id}" publishing message at {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S:%f")}'
-            )
+            if index % 100 == 0:
+                print(
+                    f'Publisher {publisher_id} with client_id "{client_id}" publishing message {index} at {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S:%f")}'
+                )
             client.publish(topic, message, 0, False)
             client.loop(0.5)
             index += 1
