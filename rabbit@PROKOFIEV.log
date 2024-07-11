@@ -1,0 +1,398 @@
+2024-07-11 07:08:40.411000-07:00 [notice] <0.222.0> Logging: configured log handlers are now ACTIVE
+2024-07-11 07:08:40.411000-07:00 [info] <0.222.0> ra: starting system quorum_queues
+2024-07-11 07:08:40.411000-07:00 [info] <0.222.0> starting Ra system: quorum_queues in directory: c:/Users/lbakken/AppData/Roaming/RabbitMQ/db/rabbit@PROKOFIEV-mnesia/quorum/rabbit@PROKOFIEV
+2024-07-11 07:08:40.506000-07:00 [info] <0.242.0> ra system 'quorum_queues' running pre init for 0 registered servers
+2024-07-11 07:08:40.553000-07:00 [info] <0.243.0> ra: meta data store initialised for system quorum_queues. 0 record(s) recovered
+2024-07-11 07:08:40.569000-07:00 [notice] <0.248.0> WAL: ra_log_wal init, open tbls: ra_log_open_mem_tables, closed tbls: ra_log_closed_mem_tables
+2024-07-11 07:08:40.617000-07:00 [info] <0.222.0> ra: starting system coordination
+2024-07-11 07:08:40.617000-07:00 [info] <0.222.0> starting Ra system: coordination in directory: c:/Users/lbakken/AppData/Roaming/RabbitMQ/db/rabbit@PROKOFIEV-mnesia/coordination/rabbit@PROKOFIEV
+2024-07-11 07:08:40.617000-07:00 [info] <0.256.0> ra system 'coordination' running pre init for 0 registered servers
+2024-07-11 07:08:40.624000-07:00 [info] <0.257.0> ra: meta data store initialised for system coordination. 0 record(s) recovered
+2024-07-11 07:08:40.624000-07:00 [notice] <0.262.0> WAL: ra_coordination_log_wal init, open tbls: ra_coordination_log_open_mem_tables, closed tbls: ra_coordination_log_closed_mem_tables
+2024-07-11 07:08:40.633000-07:00 [info] <0.222.0> ra: starting system coordination
+2024-07-11 07:08:40.633000-07:00 [info] <0.222.0> starting Ra system: coordination in directory: c:/Users/lbakken/AppData/Roaming/RabbitMQ/db/rabbit@PROKOFIEV-mnesia/coordination/rabbit@PROKOFIEV
+2024-07-11 07:08:40.737000-07:00 [info] <0.222.0> Waiting for Khepri leader for 30000 ms, 9 retries left
+2024-07-11 07:08:40.737000-07:00 [notice] <0.266.0> RabbitMQ metadata store: candidate -> leader in term: 1 machine version: 0
+2024-07-11 07:08:40.752000-07:00 [info] <0.222.0> Khepri leader elected
+2024-07-11 07:08:41.020000-07:00 [info] <0.222.0> 
+2024-07-11 07:08:41.020000-07:00 [info] <0.222.0>  Starting RabbitMQ 3.13.4 on Erlang 27.0 [jit]
+2024-07-11 07:08:41.020000-07:00 [info] <0.222.0>  Copyright (c) 2007-2024 Broadcom Inc and/or its subsidiaries
+2024-07-11 07:08:41.020000-07:00 [info] <0.222.0>  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0> 
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  node           : rabbit@PROKOFIEV
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  home dir       : c:/Users/lbakken
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  config file(s) : c:/Users/lbakken/development/lukebakken/rabbitmq/conf/rabbitmq.conf
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  cookie hash    : WNW/o1HF7ZYSWb5klAO5rg==
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  log(s)         : <stdout>
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>                 : c:/Users/lbakken/AppData/Roaming/RabbitMQ/log/rabbit@PROKOFIEV.log
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>                 : exchange:{resource,<<"/">>,exchange,<<"amq.rabbitmq.log">>}
+2024-07-11 07:08:41.025000-07:00 [info] <0.222.0>  data dir       : c:/Users/lbakken/AppData/Roaming/RabbitMQ/db/rabbit@PROKOFIEV-mnesia
+2024-07-11 07:08:41.412000-07:00 [info] <0.222.0> Running boot step pre_boot defined by app rabbit
+2024-07-11 07:08:41.412000-07:00 [info] <0.222.0> Running boot step rabbit_global_counters defined by app rabbit
+2024-07-11 07:08:41.412000-07:00 [info] <0.222.0> Running boot step rabbit_osiris_metrics defined by app rabbit
+2024-07-11 07:08:41.412000-07:00 [info] <0.222.0> Running boot step rabbit_core_metrics defined by app rabbit
+2024-07-11 07:08:41.412000-07:00 [info] <0.222.0> Running boot step rabbit_alarm defined by app rabbit
+2024-07-11 07:08:41.428000-07:00 [info] <0.302.0> Memory high watermark set to 26095 MiB (27363242803 bytes) of 65239 MiB (68408107008 bytes) total
+2024-07-11 07:08:41.428000-07:00 [info] <0.304.0> Enabling free disk space monitoring (disk free space: 422956474368, total memory: 68408107008)
+2024-07-11 07:08:41.428000-07:00 [info] <0.304.0> Disk free limit set to 50MB
+2024-07-11 07:08:41.428000-07:00 [info] <0.222.0> Running boot step code_server_cache defined by app rabbit
+2024-07-11 07:08:41.428000-07:00 [info] <0.222.0> Running boot step file_handle_cache defined by app rabbit
+2024-07-11 07:08:41.444000-07:00 [info] <0.307.0> Limiting to approx 65439 file handles (58893 sockets)
+2024-07-11 07:08:41.444000-07:00 [info] <0.308.0> FHC read buffering: OFF
+2024-07-11 07:08:41.444000-07:00 [info] <0.308.0> FHC write buffering: ON
+2024-07-11 07:08:41.444000-07:00 [info] <0.222.0> Running boot step worker_pool defined by app rabbit
+2024-07-11 07:08:41.444000-07:00 [info] <0.288.0> Will use 16 processes for default worker pool
+2024-07-11 07:08:41.444000-07:00 [info] <0.288.0> Starting worker pool 'worker_pool' with 16 processes in it
+2024-07-11 07:08:41.444000-07:00 [info] <0.222.0> Running boot step database defined by app rabbit
+2024-07-11 07:08:41.444000-07:00 [info] <0.222.0> Peer discovery: configured backend: rabbit_peer_discovery_classic_config
+2024-07-11 07:08:41.444000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `mqtt_v5`...
+2024-07-11 07:08:41.475000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `delete_ra_cluster_mqtt_node`...
+2024-07-11 07:08:41.526000-07:00 [info] <0.337.0> Trying to acquire lock {mqtt_node,{mqtt_node,rabbit@PROKOFIEV}} on nodes [rabbit@PROKOFIEV] ...
+2024-07-11 07:08:41.526000-07:00 [info] <0.337.0> Acquired lock {mqtt_node,{mqtt_node,rabbit@PROKOFIEV}}
+2024-07-11 07:08:41.526000-07:00 [info] <0.337.0> Local Ra process mqtt_node does not exist
+2024-07-11 07:08:41.526000-07:00 [info] <0.337.0> Released lock {mqtt_node,{mqtt_node,rabbit@PROKOFIEV}}
+2024-07-11 07:08:41.569000-07:00 [notice] <0.289.0> Feature flags: `delete_ra_cluster_mqtt_node` enabled
+2024-07-11 07:08:41.569000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `message_containers`...
+2024-07-11 07:08:41.648000-07:00 [notice] <0.289.0> Feature flags: `message_containers` enabled
+2024-07-11 07:08:41.679000-07:00 [notice] <0.289.0> Feature flags: `mqtt_v5` enabled
+2024-07-11 07:08:41.679000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `detailed_queues_endpoint`...
+2024-07-11 07:08:41.758000-07:00 [notice] <0.289.0> Feature flags: `detailed_queues_endpoint` enabled
+2024-07-11 07:08:41.758000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `quorum_queue_non_voters`...
+2024-07-11 07:08:41.836000-07:00 [notice] <0.289.0> Feature flags: `quorum_queue_non_voters` enabled
+2024-07-11 07:08:41.836000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `stream_update_config_command`...
+2024-07-11 07:08:41.914000-07:00 [notice] <0.289.0> Feature flags: `stream_update_config_command` enabled
+2024-07-11 07:08:41.914000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `stream_filtering`...
+2024-07-11 07:08:41.993000-07:00 [notice] <0.289.0> Feature flags: `stream_filtering` enabled
+2024-07-11 07:08:41.993000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `stream_sac_coordinator_unblock_group`...
+2024-07-11 07:08:42.071000-07:00 [notice] <0.289.0> Feature flags: `stream_sac_coordinator_unblock_group` enabled
+2024-07-11 07:08:42.071000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `restart_streams`...
+2024-07-11 07:08:42.152000-07:00 [notice] <0.289.0> Feature flags: `restart_streams` enabled
+2024-07-11 07:08:42.153000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `message_containers_deaths_v2`...
+2024-07-11 07:08:42.229000-07:00 [notice] <0.289.0> Feature flags: `message_containers_deaths_v2` enabled
+2024-07-11 07:08:42.229000-07:00 [notice] <0.289.0> Feature flags: attempt to enable `rabbit_mqtt_qos0_queue`...
+2024-07-11 07:08:42.307000-07:00 [notice] <0.289.0> Feature flags: `rabbit_mqtt_qos0_queue` enabled
+2024-07-11 07:08:42.307000-07:00 [info] <0.222.0> DB: virgin node -> run peer discovery
+2024-07-11 07:08:42.327000-07:00 [notice] <0.45.0> Application mnesia exited with reason: stopped
+2024-07-11 07:08:42.528000-07:00 [info] <0.222.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2024-07-11 07:08:42.528000-07:00 [info] <0.222.0> Successfully synced tables from a peer
+2024-07-11 07:08:42.528000-07:00 [info] <0.222.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2024-07-11 07:08:42.528000-07:00 [info] <0.222.0> Successfully synced tables from a peer
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Successfully synced tables from a peer
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step tracking_metadata_store defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.562.0> Setting up a table for connection tracking on this node: tracked_connection
+2024-07-11 07:08:42.543000-07:00 [info] <0.562.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost
+2024-07-11 07:08:42.543000-07:00 [info] <0.562.0> Setting up a table for per-user connection counting on this node: tracked_connection_per_user
+2024-07-11 07:08:42.543000-07:00 [info] <0.562.0> Setting up a table for channel tracking on this node: tracked_channel
+2024-07-11 07:08:42.543000-07:00 [info] <0.562.0> Setting up a table for channel tracking on this node: tracked_channel_per_user
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step networking_metadata_store defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step feature_flags defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step codec_correctness_check defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step external_infrastructure defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_event defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_registry defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_exchange_type_direct defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_exchange_type_headers defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_exchange_type_topic defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_priority_queue defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Priority queues enabled, real BQ is rabbit_variable_queue
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_queue_location_client_local defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_queue_location_random defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step kernel_ready defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_sysmon_minder defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step rabbit_epmd_monitor defined by app rabbit
+2024-07-11 07:08:42.543000-07:00 [info] <0.570.0> epmd monitor knows us, inter-node communication (distribution) port: 25672
+2024-07-11 07:08:42.543000-07:00 [info] <0.222.0> Running boot step guid_generator defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_node_monitor defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.574.0> Starting rabbit_node_monitor (in ignore mode)
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step delegate_sup defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_memory_monitor defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_fifo_dlx_sup defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step core_initialized defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_definitions_hashing defined by app rabbit
+2024-07-11 07:08:42.559000-07:00 [info] <0.222.0> Running boot step rabbit_exchange_parameters defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_policies defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_policy defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_queue_location_validator defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_quorum_queue defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_stream_coordinator defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_vhost_limit defined by app rabbit
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_federation_parameters defined by app rabbitmq_federation
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_federation_supervisor defined by app rabbitmq_federation
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_federation_queue defined by app rabbitmq_federation
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_federation_upstream_exchange defined by app rabbitmq_federation
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Management plugin: using rates mode 'basic'
+2024-07-11 07:08:42.590000-07:00 [info] <0.222.0> Running boot step recovery defined by app rabbit
+2024-07-11 07:08:42.606000-07:00 [info] <0.222.0> Running boot step empty_db_check defined by app rabbit
+2024-07-11 07:08:42.606000-07:00 [info] <0.222.0> Will seed default virtual host and user...
+2024-07-11 07:08:42.606000-07:00 [info] <0.222.0> Adding vhost '/' (description: 'Default virtual host', tags: [])
+2024-07-11 07:08:42.628000-07:00 [info] <0.634.0> Making sure data directory 'c:/Users/lbakken/AppData/Roaming/RabbitMQ/db/rabbit@PROKOFIEV-mnesia/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists
+2024-07-11 07:08:42.628000-07:00 [info] <0.634.0> Setting segment_entry_count for vhost '/' with 0 queues to '2048'
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Starting message stores for vhost '/'
+2024-07-11 07:08:42.637000-07:00 [info] <0.643.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Started message store of type transient for vhost '/'
+2024-07-11 07:08:42.637000-07:00 [info] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index
+2024-07-11 07:08:42.637000-07:00 [warning] <0.647.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Started message store of type persistent for vhost '/'
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Recovering 0 queues of type rabbit_classic_queue took 16ms
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Recovering 0 queues of type rabbit_quorum_queue took 0ms
+2024-07-11 07:08:42.637000-07:00 [info] <0.634.0> Recovering 0 queues of type rabbit_stream_queue took 0ms
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Created user 'guest'
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Successfully set user tags for user 'guest' to [administrator]
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Successfully set permissions for user 'guest' in virtual host '/' to '.*', '.*', '.*'
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_observer_cli defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_looking_glass defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_core_metrics_gc defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step background_gc defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step routing_ready defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step pre_flight defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step notify_cluster defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step networking defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_quorum_queue_periodic_membership_reconciliation defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step definition_import_worker_pool defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.288.0> Starting worker pool 'definition_import_pool' with 16 processes in it
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step cluster_name defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-zJz0sIcybGl5R2bkJ2jnyg'
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step virtual_host_reconciliation defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step direct_client defined by app rabbit
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_federation_exchange defined by app rabbitmq_federation
+2024-07-11 07:08:42.653000-07:00 [info] <0.222.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management
+2024-07-11 07:08:42.653000-07:00 [info] <0.696.0> Resetting node maintenance status
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0> Deprecated features: `management_metrics_collection`: Feature `management_metrics_collection` is deprecated.
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0> By default, this feature can still be used for now.
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0> Its use will not be permitted by default in a future minor RabbitMQ version and the feature will be removed from a future major RabbitMQ version; actual versions to be determined.
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0> To continue using this feature when it is not permitted by default, set the following parameter in your configuration:
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0>     "deprecated_features.permit.management_metrics_collection = true"
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0> To test RabbitMQ as if the feature was removed, set this in your configuration:
+2024-07-11 07:08:42.794000-07:00 [warning] <0.718.0>     "deprecated_features.permit.management_metrics_collection = false"
+2024-07-11 07:08:43.421000-07:00 [info] <0.226.0> Logging to exchange 'amq.rabbitmq.log' in vhost '/' ready
+2024-07-11 07:08:46.749000-07:00 [info] <0.754.0> Management plugin: HTTP (non-TLS) listener started on port 15672
+2024-07-11 07:08:46.749000-07:00 [info] <0.785.0> Statistics database started.
+2024-07-11 07:08:46.749000-07:00 [info] <0.784.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+2024-07-11 07:08:46.749000-07:00 [info] <0.713.0> opening log file: "c:/Users/lbakken/log/rabbitmq_management/access.log.2024_07_11_14"
+2024-07-11 07:08:46.749000-07:00 [info] <0.817.0> started Stream TCP listener on [::]:5552
+2024-07-11 07:08:46.749000-07:00 [info] <0.835.0> started Stream TCP listener on 0.0.0.0:5552
+2024-07-11 07:08:46.764000-07:00 [info] <0.845.0> Starting MQTT retained message store rabbit_mqtt_retained_msg_store_dets for vhost '/'
+2024-07-11 07:08:46.764000-07:00 [info] <0.845.0> Recovered MQTT retained message store rabbit_mqtt_retained_msg_store_dets for vhost '/'
+2024-07-11 07:08:46.764000-07:00 [info] <0.865.0> started MQTT TCP listener on [::]:1883
+2024-07-11 07:08:46.764000-07:00 [info] <0.883.0> started MQTT TCP listener on 0.0.0.0:1883
+2024-07-11 07:08:46.780000-07:00 [info] <0.888.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692
+2024-07-11 07:08:46.780000-07:00 [info] <0.696.0> Ready to start client connection listeners
+2024-07-11 07:08:46.780000-07:00 [info] <0.932.0> started TCP listener on [::]:5672
+2024-07-11 07:08:46.785000-07:00 [info] <0.950.0> started TCP listener on 0.0.0.0:5672
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0> Server startup complete; 9 plugins started.
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_prometheus
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_federation
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_mqtt
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_top
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_stream_management
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_stream
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_management
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_management_agent
+2024-07-11 07:08:46.874000-07:00 [info] <0.696.0>  * rabbitmq_web_dispatch
+2024-07-11 07:08:46.937000-07:00 [info] <0.10.0> Time to start RabbitMQ: 16162 ms
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0> handle.exe output did not contain a line beginning with 'File': ["Nthandle v5.0 - Handle viewer",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "Copyright (C) 1997-2022 Mark Russinovich",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "Sysinternals - www.sysinternals.com",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "Handle type summary:",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 2",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 47",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 140",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 2",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 10",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 6",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 2",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 1",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 3",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 6",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 8",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 40",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 10",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 2",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "<Unknown type>  : 79",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "Process         : 3",
+2024-07-11 07:10:06.008000-07:00 [warning] <0.719.0>                                                                  "Total handles: 361"]
+2024-07-11 07:10:06.840000-07:00 [info] <0.956.0> Accepted MQTT connection [::1]:52647 -> [::1]:1883 for client ID bd329883-a02f-420c-bdb6-9f08990efb2b
+2024-07-11 07:10:08.346000-07:00 [info] <0.956.0> MQTT connection <<"[::1]:52647 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:16.777000-07:00 [info] <0.982.0> Accepted MQTT connection [::1]:52659 -> [::1]:1883 for client ID f1d789f9-932a-43de-a536-180f50d8545c
+2024-07-11 07:10:16.777000-07:00 [info] <0.981.0> Accepted MQTT connection [::1]:52658 -> [::1]:1883 for client ID 5af828f1-63eb-4408-a374-0d8895f4baa7
+2024-07-11 07:10:16.777000-07:00 [info] <0.983.0> Accepted MQTT connection [::1]:52660 -> [::1]:1883 for client ID 7b57f721-6d47-43d0-8034-29aaa7cc4360
+2024-07-11 07:10:16.777000-07:00 [info] <0.984.0> Accepted MQTT connection [::1]:52661 -> [::1]:1883 for client ID adf6ac68-121e-476e-81a6-3bb849707066
+2024-07-11 07:10:16.792000-07:00 [info] <0.993.0> Accepted MQTT connection [::1]:52671 -> [::1]:1883 for client ID 09cc26eb-8d2c-4a34-bf48-688d82d67b57
+2024-07-11 07:10:16.792000-07:00 [info] <0.994.0> Accepted MQTT connection [::1]:52670 -> [::1]:1883 for client ID aba55697-1d89-4e34-b4c5-084ba2bee665
+2024-07-11 07:10:16.792000-07:00 [info] <0.995.0> Accepted MQTT connection [::1]:52672 -> [::1]:1883 for client ID 073c74a4-cbf2-4c62-a47d-dee907b65af5
+2024-07-11 07:10:16.792000-07:00 [info] <0.997.0> Accepted MQTT connection [::1]:52680 -> [::1]:1883 for client ID 69d0b59a-210b-402b-85f7-66a96417566e
+2024-07-11 07:10:16.792000-07:00 [info] <0.996.0> Accepted MQTT connection [::1]:52676 -> [::1]:1883 for client ID 1d8d75cf-b965-4cd1-abb3-3cda960a3666
+2024-07-11 07:10:16.792000-07:00 [info] <0.1008.0> Accepted MQTT connection [::1]:52685 -> [::1]:1883 for client ID 4ab6dac8-18e8-4681-ab2c-5d4013c1a2f4
+2024-07-11 07:10:17.798000-07:00 [info] <0.982.0> MQTT connection <<"[::1]:52659 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.981.0> MQTT connection <<"[::1]:52658 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.997.0> MQTT connection <<"[::1]:52680 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.994.0> MQTT connection <<"[::1]:52670 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.983.0> MQTT connection <<"[::1]:52660 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.984.0> MQTT connection <<"[::1]:52661 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.993.0> MQTT connection <<"[::1]:52671 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.995.0> MQTT connection <<"[::1]:52672 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.798000-07:00 [info] <0.996.0> MQTT connection <<"[::1]:52676 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:10:17.813000-07:00 [info] <0.1008.0> MQTT connection <<"[::1]:52685 -> [::1]:1883">> will terminate because peer closed TCP connection
+2024-07-11 07:11:07.966000-07:00 [info] <0.1038.0> Accepted MQTT connection [::1]:52706 -> [::1]:1883 for client ID 804c9f4c-438f-42db-ab09-00e81057109f
+2024-07-11 07:11:07.966000-07:00 [info] <0.1039.0> Accepted MQTT connection [::1]:52705 -> [::1]:1883 for client ID c5c1cf24-1b38-480b-b209-91f19e1bd03f
+2024-07-11 07:11:07.966000-07:00 [info] <0.1041.0> Accepted MQTT connection [::1]:52708 -> [::1]:1883 for client ID 5bfe946c-0cca-45dd-a344-020874a5ff3a
+2024-07-11 07:11:07.981000-07:00 [info] <0.1047.0> Accepted MQTT connection [::1]:52714 -> [::1]:1883 for client ID 9a8b85c0-778b-49a0-8bf3-075f50365e79
+2024-07-11 07:11:07.981000-07:00 [info] <0.1048.0> Accepted MQTT connection [::1]:52715 -> [::1]:1883 for client ID 2682d27f-2ec2-4b54-b7dd-7a45782c140a
+2024-07-11 07:11:07.981000-07:00 [info] <0.1049.0> Accepted MQTT connection [::1]:52716 -> [::1]:1883 for client ID 800ba41d-a273-452f-bed9-db43c4a785ca
+2024-07-11 07:11:07.981000-07:00 [info] <0.1056.0> Accepted MQTT connection [::1]:52723 -> [::1]:1883 for client ID 9ff0cd84-ac1c-417a-9a60-71f77e35a6b0
+2024-07-11 07:11:07.998000-07:00 [info] <0.1059.0> Accepted MQTT connection [::1]:52726 -> [::1]:1883 for client ID 6b5dfef7-f0dc-4176-8cdc-abdde9ac8619
+2024-07-11 07:11:07.998000-07:00 [info] <0.1061.0> Accepted MQTT connection [::1]:52728 -> [::1]:1883 for client ID 7a987576-a2d2-41e6-873d-deacd098b162
+2024-07-11 07:11:08.013000-07:00 [info] <0.1060.0> Accepted MQTT connection [::1]:52727 -> [::1]:1883 for client ID b43cd4e0-011c-4162-8f09-a7fa6146dbff
+2024-07-11 07:11:23.102000-07:00 [info] <0.1069.0> Accepted MQTT connection [::1]:52748 -> [::1]:1883 for client ID swOZPbz3p8NhWVl3yQcoJw
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> writing to MQTT socket #Port<0.795> failed: closed
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> ** Generic server <0.1069.0> terminating
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> ** Last message in was {'$gen_cast',
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                         {queue_event,rabbit_mqtt_qos0_queue,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                          {rabbit_mqtt_qos0_queue,none,none,false,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           {mc,mc_mqtt,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                            {mqtt_msg,false,0,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             <<"rabbitmq-users-4AOwZrQyekI">>,false,undefined,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             <<"This message was published to localhost | c5c1cf24-1b38-480b-b209-91f19e1bd03f | 1720707094.087867 | / | 52 | MESSAGE BODY">>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             #{},undefined},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                            #{d => false,x => <<"amq.topic">>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              rk => [<<"rabbitmq-users-4AOwZrQyekI">>],
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              rts => 1720707094087}}}}}
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> ** When Server state == #{keepalive =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                            {state,60,#Ref<0.3853905864.2516582401.190004>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             #Port<0.795>,30,true},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           socket => #Port<0.795>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           conn_name => <<"[::1]:52748 -> [::1]:1883">>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           connection_state => running,await_recv => true,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           conserve => false,deferred_recv => false,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           proc_state =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                            #{cfg =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                               #{port => 1883,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 exchange =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                  {resource,<<"/">>,exchange,<<"amq.topic">>},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 socket => #Port<0.795>,prefetch => 10,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 ip_addr => {0,0,0,0,0,0,0,1},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 peer_port => 52748,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 connected_at => 1720707083102,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 published => false,conn_name => undefined,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 client_id => <<"swOZPbz3p8NhWVl3yQcoJw">>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 ssl_login_name => none,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 retainer_pid => <0.845.0>,clean_start => true,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 delivery_flow => flow,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 peer_ip_addr => {0,0,0,0,0,0,0,1},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 proto_ver => mqtt311,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 session_expiry_interval_secs => 0,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 trace_state => none,will_msg_defined => false},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              auth_state =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                               {auth_state,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                {user,<<"guest">>,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 [administrator],
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                 [{rabbit_auth_backend_internal,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                   #Fun<rabbit_auth_backend_internal.3.26105038>}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                #{<<"client_id">> =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                   <<"swOZPbz3p8NhWVl3yQcoJw">>}},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              packet_id => 1,qos0_messages_dropped => 0,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              queue_states => #{num_queue_clients => 0},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              queues_soft_limit_exceeded => #{},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              ra_register_state => undefined,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              subscriptions =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                               #{<<"rabbitmq-users-4AOwZrQyekI">> =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                  {mqtt_subscription_opts,0,false,false,0,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                                   undefined}},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              unacked_client_pubs => #{},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                              unacked_server_pubs => #{}},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           proxy_socket => undefined,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                           stats_timer =>
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                            {state,fine,100,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             #Ref<0.3853905864.2516582401.199995>}}
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> ** Reason for termination ==
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> ** {{send_failed,closed},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>     [{rabbit_mqtt_reader,'-process_received_bytes/2-fun-0-',2,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                          [{file,"rabbit_mqtt_reader.erl"},{line,338}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {rabbit_mqtt_processor,send,4,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             [{file,"rabbit_mqtt_processor.erl"},{line,1683}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {rabbit_mqtt_processor,maybe_publish_to_client,4,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             [{file,"rabbit_mqtt_processor.erl"},{line,2073}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {rabbit_mqtt_processor,deliver_one_to_client,3,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             [{file,"rabbit_mqtt_processor.erl"},{line,2036}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {rabbit_mqtt_processor,handle_queue_event,2,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                             [{file,"rabbit_mqtt_processor.erl"},{line,1943}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {rabbit_mqtt_reader,handle_cast,2,
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>                          [{file,"rabbit_mqtt_reader.erl"},{line,143}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {gen_server,try_handle_cast,3,[{file,"gen_server.erl"},{line,2199}]},
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0>      {gen_server,handle_msg,6,[{file,"gen_server.erl"},{line,2261}]}]}
+2024-07-11 07:11:34.087000-07:00 [error] <0.1069.0> 
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>   crasher:
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     initial call: rabbit_mqtt_reader:init/1
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     pid: <0.1069.0>
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     registered_name: []
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     exception exit: {send_failed,closed}
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in function  rabbit_mqtt_reader:'-process_received_bytes/2-fun-0-'/2 (rabbit_mqtt_reader.erl, line 338)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from rabbit_mqtt_processor:send/4 (rabbit_mqtt_processor.erl, line 1683)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from rabbit_mqtt_processor:maybe_publish_to_client/4 (rabbit_mqtt_processor.erl, line 2073)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from rabbit_mqtt_processor:deliver_one_to_client/3 (rabbit_mqtt_processor.erl, line 2036)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from rabbit_mqtt_processor:handle_queue_event/2 (rabbit_mqtt_processor.erl, line 1943)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from rabbit_mqtt_reader:handle_cast/2 (rabbit_mqtt_reader.erl, line 143)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from gen_server:try_handle_cast/3 (gen_server.erl, line 2199)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>       in call from gen_server:handle_msg/6 (gen_server.erl, line 2261)
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     ancestors: [<0.853.0>,<0.852.0>,<0.851.0>,<0.849.0>,<0.848.0>,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   rabbit_mqtt_sup,<0.841.0>]
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     message_queue_len: 3
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     messages: [{tcp_closed,#Port<0.795>},emit_stats,emit_stats]
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     links: [<0.853.0>]
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     dictionary: [{{xtype_to_module,topic},rabbit_exchange_type_topic},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {topic_permission_cache,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       [{<<"rabbitmq-users-4AOwZrQyekI">>,<<"guest">>,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         <<"swOZPbz3p8NhWVl3yQcoJw">>,<<"/">>,<<"amq.topic">>,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         read}]},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {'$logger_metadata$',
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       #{domain => [rabbitmq,connection,mqtt]}},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {permission_cache,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       [{{resource,<<"/">>,queue,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                             <<"mqtt-subscription-swOZPbz3p8NhWVl3yQcoJwqos0">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         #{<<"client_id">> => <<"swOZPbz3p8NhWVl3yQcoJw">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         read},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                        {{resource,<<"/">>,exchange,<<"amq.topic">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         #{<<"client_id">> => <<"swOZPbz3p8NhWVl3yQcoJw">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         read},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                        {{resource,<<"/">>,queue,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                             <<"mqtt-subscription-swOZPbz3p8NhWVl3yQcoJwqos0">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         #{<<"client_id">> => <<"swOZPbz3p8NhWVl3yQcoJw">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         write},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                        {{resource,<<"/">>,queue,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                             <<"mqtt-subscription-swOZPbz3p8NhWVl3yQcoJwqos0">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         #{<<"client_id">> => <<"swOZPbz3p8NhWVl3yQcoJw">>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         configure}]},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {atm_cache,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       [{<<"rabbitmq-users-4AOwZrQyekI">>,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         <<"rabbitmq-users-4AOwZrQyekI">>}]},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {mta_cache,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       [{<<"rabbitmq-users-4AOwZrQyekI">>,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         <<"rabbitmq-users-4AOwZrQyekI">>}]},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                   {guid_secure,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                       {{0,rabbit@PROKOFIEV,
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                         #Ref<0.3853905864.2516582403.73135>},
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>                        0}}]
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     trap_exit: true
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     status: running
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     heap_size: 1598
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     stack_size: 29
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>     reductions: 47642277
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0>   neighbours:
+2024-07-11 07:11:34.889000-07:00 [error] <0.1069.0> 
+2024-07-11 07:11:34.889000-07:00 [error] <0.853.0> Ranch listener {acceptor,{0,0,0,0,0,0,0,0},1883} had connection process started with rabbit_mqtt_reader:start_link/3 at <0.1069.0> exit with reason: {send_failed,closed}
+2024-07-11 07:11:34.889000-07:00 [error] <0.853.0> 
